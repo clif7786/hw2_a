@@ -1,8 +1,19 @@
 @startuml
+actor Player
+actor :Another Player:
 
-(First usecase)
-(Another usecase) as (UC2)  
-usecase UC3
-usecase (Last\nusecase) as UC4
-(I am batman)
+Player ->       (Begin Game)
+                (Begin Game) <- :Another Player:
+Player -->      (Movement)
+Player --->     (Magic)
+                (Magic) <. (Cast Spell)
+                (Magic) <. (Counterspell)
+Player ---->    (Select Unit)
+Player ----->   (View Statistics) 
+                (View Statistics) <. (View Character Statistics)
+                (View Statistics) <. (View Game Statistics)
+Player ------>  (Combat)
+Player -------> (Conduct Diplomacy)
+                (Conduct Diplomacy) <- :Another Player:
+
 @enduml
