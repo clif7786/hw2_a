@@ -31,6 +31,8 @@
 {   \arabic{twocoli}. \  \parbox[t]{0.40\textwidth}{#1 \vspace{0.1 in}} & \parbox[t]{0.47\textwidth}{ \vspace{0.1 in}} \stepcounter{twocoli}\\}
 \newcommand{\tabright}[1]
 { - & \arabic{twocoli}. \  \parbox[t]{0.40\textwidth}{#1 \vspace{0.1 in}} \stepcounter{twocoli}\\}
+
+\newcommand{\horiz}{\hrule \vspace{0.1 in}}
 % ------------------------------------------------------------------------------
 \begin{document}
 
@@ -106,6 +108,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{comment}
 
 \section{Select Game Type}
+\horiz
 \begin{al}
 	\item[Actor:] Player starting the game
 	\item[Goal:] To resume a game or start a new game
@@ -151,6 +154,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{comment}
 
 \section{Resume Game} %should this be part of "Start Game"?
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To resume a saved game
@@ -169,6 +173,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{twocol}
 
 \section{Save Game} %Should "Quit Game" extend this?
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To save the current game state for later play
@@ -187,6 +192,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{twocol}
 
 \section{Select Scenario} %Should this be part of "Begin Game"?
+\horiz
 \begin{al}
 	\item[Actor:] Hosting Player
 	\item[Goal:] To select a pre-made game scenario.
@@ -205,6 +211,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 
 
 \section{End Inter-Phase}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To end the current player's phase.
@@ -221,6 +228,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{twocol}
 
 \section{Select Ally Candidate}
+\horiz
 \begin{al}
 	\item[Actors:] All Players
 	\item[Goal:] To determine player alliances for the game-turn.
@@ -262,6 +270,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{comment}
 
 \section{Move Units}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To move unit(s) from one tile to another
@@ -291,6 +300,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 \section{Carry}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To carry a character using a flying unit
@@ -312,6 +322,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{twocol}
     
 \section{Select Subset of Stack}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To select one or more units out of a stack
@@ -344,6 +355,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 
 
 \section{Attack Units} %section 13
+\horiz
 \begin{al}
 	\item[Actor:] Player %, Enemy Player
 	\item[Goal:] Attack opposing player through combat
@@ -369,6 +381,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 \section{Advance Units After Combat}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To move units forward into the enemies retreating path
@@ -392,6 +405,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 \section{Retreat}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To retreat units after losing combat
@@ -414,6 +428,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 \section{Choose Leader}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] To select one leader if multiple are present
@@ -431,6 +446,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 \section{Spend Combat Mana}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] Cast magic from leaders in combat
@@ -452,6 +468,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 \section{Rally Units}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] Attempt to rally units that have been demoralized
@@ -475,6 +492,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 
 %magic
 \section{View Character Statistics}
+\horiz
 \begin{al}
 	\item[Actors:] Player
 	\item[Goal:] view the statistics and current state of a certain character 
@@ -499,6 +517,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 \section{Cast Untargeted Spell}
+\horiz
 \begin{al}
         \item[Actors:] Player
         \item[Goal:] To cast a particular spell on a particular target, which may be a
@@ -530,6 +549,7 @@ makes internal adjustments to create the force walls.}
 
 
 \section{Cast Targeted Spell}
+\horiz
 \begin{al}
         \item[Actors:] Player
         \item[Goal:] To cast a particular spell on a particular target, which may be a 
@@ -567,6 +587,7 @@ makes internal adjustments to create the force walls.}
 
 
 \section{Cast Conjuring Spell}
+\horiz
 \begin{al}
         \item[Actors:] Player
         \item[Goal:] To conjure a particular type of unit to aide the player.
@@ -600,6 +621,7 @@ makes internal adjustments to create the force walls.}
 \end{al}
 
 \section{Manna Transfer}
+\horiz
 \begin{al}
         \item[Actors:] Player
         \item[Goal:] To transfer Manna between a player's characters.
@@ -641,6 +663,7 @@ Manna to transfer and to what character.
 
 %Diplomacy
 \section{Create Emissary}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Preconditions:] Friendly movement phase; character with diplomatic rating greater
@@ -654,6 +677,7 @@ than 0; character has 1 or 0 emissaries.
 \end{twocol}
 
 \section{Eliminate Emissary}
+\horiz
 \begin{al}
 	\item[Actor:] Player A, Player B
 	\item[Precondition:] Emissary occupies same hex as enemy unit(s).
@@ -666,6 +690,7 @@ than 0; character has 1 or 0 emissaries.
 \end{twocol}
 
 \section{Conduct Diplomacy}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Precondition:] Player controls an emissary or character that occupies
@@ -687,6 +712,7 @@ than 0; character has 1 or 0 emissaries.
 \end{al}
 
 \section{Move Diplomacy Marker}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:]
@@ -707,6 +733,7 @@ than 0; character has 1 or 0 emissaries.
 \end{al}
 
 \section{Sacrificing a Unit}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:]
@@ -728,6 +755,7 @@ than 0; character has 1 or 0 emissaries.
 \end{al}
 
 \section{Invade Neutral Province}
+\horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Precondition:] Happens during movement phase.
