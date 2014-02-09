@@ -34,6 +34,9 @@
 
 \newcommand{\horiz}{\hrule \vspace{0.1 in}}
 % ------------------------------------------------------------------------------
+\title{HW2 Group A}
+\subtitle{Use Case Descriptions \& Diagram}
+\maketitle
 \begin{document}
 
 
@@ -72,25 +75,11 @@
 
 \begin{comment}
 
-* Select Game Type, Select Scenario overlap and should be merged
-  Resume game could extend or be merged with a start game use case
 
 * We have save game but not quit. Is save game related enough to quitting
   to extend or be merged with quitting?
 
 * Should Choose Leader be merged with a general "Select Unit(s)"?
-
-* Should enemy player be an actor in combat?
-
-* Display Random Event & Player order could use more User Actions
-  to make it use-casey. "Actor: System" is the sort of thing that would give
-  Dr. Jeffery a heart-attack. (tjasz: do we even need a case for it?)
-
-* Invasion can happen outside of normal player movement
-  And the player might not be able to prevent it.
-
-* Is confirm important enough to be it's own use case? Or should it just be
-  part of the steps of other use cases?
 
 * Some things don't fit nicely into the two-column format. do they need tweaking?
 
@@ -161,7 +150,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 	\item[Precondition:] A saved game exists. The player is at the proper menu
 	                     to select it. %Second sentence seems to focus on interface a lot
 	\item[Summary:] The player restores a previously saved state
-	\item[Related:] \textbf{Confirm}
+	\item[Related:] 
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
@@ -180,7 +169,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 	\item[Precondition:] A game is currently being played
 	\item[Summary:] The player selects a save option and the system saves
 	                the current state.
-	\item[Related:] \textbf{Confirm}
+	\item[Related:] 
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
@@ -198,7 +187,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 	\item[Goal:] To select a pre-made game scenario.
 	\item[Precondition:] A new game has been initiated
 	\item[Summary:] The hosting player selects a pre-made game scenario, for a new game.
-	\item[Related:] \textbf{Confirm}
+	\item[Related:]
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
@@ -218,7 +207,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 	\item[Precondition:] The game is in a phase the player has control to end.
 	\item[Summary:] The player wishes to end their current phase early. If the
                     rules are not violated the turn is ended.
-	\item[Related:] \textbf{Confirm}
+	\item[Related:] 
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
@@ -718,7 +707,7 @@ than 0; character has 1 or 0 emissaries.
 \horiz
 \begin{al}
 	\item[Actor:] Player
-	\item[Goal:]
+	\item[Goal:] Move a player's diplomacy marker.
 	\item[Precondition:] Positive results from \textbf{Conduct Diplomacy}
                          or \textbf{Sacrificing a Unit}.
 	\item[Summary:] Player moves their diplomacy marker on the Diplomacy Track.
@@ -735,14 +724,15 @@ than 0; character has 1 or 0 emissaries.
                         and the diplomacy marker is removed from play.
 \end{al}
 
-\section{Sacrificing a Unit}
+\section{Sacrifice Human}
 \horiz
 \begin{al}
 	\item[Actor:] Player
-	\item[Goal:]
+	\item[Goal:] Sacrifice a character or unit in order to sway a neutral's
+            allegiance.
 	\item[Precondition:] Movement is done during movement phase.
                          The sacrifice is done during the diplomacy phase.
-	\item[Summary:] A player sacrifices a unit.
+	\item[Summary:] A player sacrifices a unit or eligible character.
 	\item[Related:] \textbf{Move Diplomacy Marker}
 \end{al}
 \textbf{Steps:} \\
@@ -757,6 +747,7 @@ than 0; character has 1 or 0 emissaries.
                         their religion.
 \end{al}
 
+\begin{comment}
 \section{Invade Neutral Province}
 \horiz
 \begin{al}
@@ -775,7 +766,7 @@ than 0; character has 1 or 0 emissaries.
 \begin{al}
 	\item[Alternative:] User chooses not to invade
 \end{al}
-
+\end{comment}
 
 \end{document}
 
