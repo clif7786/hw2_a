@@ -1,1 +1,3 @@
 Group A's homework two for CS 383 Software Engineering.
+
+Just trying out GitHub and stuff....
