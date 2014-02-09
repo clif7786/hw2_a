@@ -1,0 +1,45 @@
+'Jay Drage, cs383, 2/8/14
+'Use Cases diagram
+
+@startuml
+
+title Magic, Diplomacy, and Combat Cases
+
+left to right direction
+:Player: as Player
+:Defender: as Defender
+
+'Combat Use Cases
+Player -right-> (Attack Units)
+Player -right-> (Advance Units After Combat)
+Player -right-> (Retreat)
+(Attack Units) .> (Choose Leader) :<<uses>>
+(Attack Units) .> (Spend Combat Mana) :<<uses>>
+Player -right-> (Rally Units) : Combat
+
+'Magic Use Cases
+Player -left-> (Cast Untargeted Spell) : Magic
+'Player -left-> (Cast Targeted Spell)
+(Cast Targeted Spell) ..|> (Cast Untargeted Spell) :<<extends>>
+'(Cast Targeted Spell) -|> (Select Subset of Stack) :<<uses>>
+'Player -down-> (Cast Conjuring Spell)
+(Cast Conjuring Spell) ..|> (Cast Untargeted Spell) :<<extends>>
+'Player -down-> (Manna Transfer)
+(Manna Transfer) ..|> (Cast Untargeted Spell) :<<extends>>
+
+'Diplomacy Use Cases
+Player -down--> (Create Emissary)
+Player -down--> (Eliminate Emissary)
+Player -down--> (Conduct Diplomacy) : Diplomacy
+(Conduct Diplomacy) ..> (Move Diplomacy Marker) :<<uses>>
+Player -down--> (Sacrifice Human)
+(Sacrifice Human) ..> (Move Diplomacy Marker) :<<uses>>
+Player -down--> (Select Ally Candidate)
+
+'Uses Cases involving defending player in combat
+Defender --> (Retreat)
+Defender --> (Advance Units After Combat)
+Defender --> (Choose Leader)
+Defender --> (Spend Combat Mana)
+
+@enduml

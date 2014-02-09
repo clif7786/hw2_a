@@ -1,0 +1,26 @@
+'Jay Drage, cs383, 2/8/14
+'Use Cases diagram
+
+@startuml
+
+title Set Up & Movement Cases
+
+left to right direction
+:Player: as Player
+
+'Setup & Misc Use Cases
+Player -up--> (Set up a scenario)
+Player -up--> (Resume Game)
+Player -up--> (Save Game) : Setup & Misc
+Player -up--> (Select Scenario)
+Player -up--> (End Inter-Phase)
+Player -up--> (View Character Statistics)
+
+'Movement Use Cases
+Player -right-> (Move) : Movement
+(Carry) ..|> (Move) :<<extends>>
+(Move) ..> (Select Subset of Stack\n==\nused by multiple other cases) :<<uses>>
+
+Player -left-> (Toggle Dragon Blockade Status)
+
+@enduml
