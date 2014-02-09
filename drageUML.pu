@@ -1,0 +1,53 @@
+'Jay Drage, cs383, 2/8/14
+'Use Cases diagram
+
+@startuml
+
+left to right direction
+:Player: as Player
+:Defender: as Defender
+
+'Setup & Misc Use Cases
+Player -up--> (Select Game Type)
+Player -up--> (Set up a scenario)
+Player -up--> (Resume Game)
+Player -up--> (Save Game) : Setup & Misc
+Player -up--> (Select Scenario)
+Player -up--> (End Inter-Phase)
+Player -up--> (View Character Statistics)
+
+'Movement Use Cases
+Player <-left- (Move Units) : Movement
+(Move Units) .left.> (Carry)
+(Move Units) .left.> (Select Subset of Stack)
+
+'Combat Use Cases
+Player -right-> (Attack Units)
+Player -right-> (Advance Units After Combat)
+Player -right-> (Retreat)
+(Attack Units) .> (Choose Leader)
+(Attack Units) .> (Spend Combat Mana)
+Player <-right- (Rally Units) : Combat
+
+'Magic Use Cases
+Player -down-> (Cast Untargeted Spell) : Magic
+Player -down-> (Cast Targeted Spell)
+Player -down-> (Cast Conjuring Spell)
+Player -down-> (Manna Transfer)
+
+'Diplomacy Use Cases
+Player -down--> (Create Emissary)
+Player -down--> (Eliminate Emissary)
+Player -down--> (Conduct Diplomacy) : Diplomacy
+Player -down--> (Move Diplomacy Marker)
+Player -down--> (Sacrifice a Unit)
+Player -down--> (Invade Neutral Province)
+Player -down--> (Select Ally Candidate)
+
+'Uses Cases involving defending player in combat
+Defender ---> (Retreat)
+Defender ---> (Advance Units After Combat)
+Defender ---> (Choose Leader)
+Defender ---> (Spend Combat Mana)
+
+@enduml
