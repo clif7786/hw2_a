@@ -9,7 +9,7 @@ Player ->      (Select Ally Candidate)
 Player -->     (Create Emissary)
 Player -->     (Eliminate Emissary)
 Player --->    (Invade Neutral Province)
-(Invade Neutral Province) --|> (Attack) :extends
+(Invade Neutral Province) --|> (Move) :extends
 Player --->    (Move Diplomacy Marker)
 Player -->     (Conduct Diplomacy)
 Player -->     (Sacrifice a Unit)
