@@ -1,4 +1,4 @@
-﻿\documentclass{article}
+\documentclass{article}
 \usepackage{graphicx}
 \usepackage{fullpage} % really need smaller margins for two column steps
 \usepackage[none]{hyphenat} %no hyphenation!
@@ -37,10 +37,18 @@
 \title{HW2 Group A \\ Use Case Descriptions \& Diagram}
 \begin{document}
 \maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
 
+\section*{Use Case Diagrams}
+\includegraphics[width=\textwidth]{master.png}
+\includegraphics[width=\textwidth]{setupmisc.png}
+
+\pagebreak
 
 \section*{Overview of Networking}
-\it{Author: Jay Drage}
+\textit{Author: Jay Drage}
 
 Gameplay is conducted through discrete states that are sent out at the end of every players turn. This allows for players to not be present during another player's turn. When a player starts the game client and at specific time intervals after startup the game will update latest received state. Player will make decisions and at the end of turn a new state is sent out to other player. 
 
@@ -48,20 +56,13 @@ Games are initialized by a host player adding network addresses to a list. Membe
 
 Players will be able to pre-stage their actions out of their turn and will be given a warning if a state update effects their actions.
 
-\bf{Issues:} 
+\textbf{Issues:} 
 During combat play cannot progress if another player must retreat or advance after combat. Possible resolution is for defending player to turn on an option for computer to auto resolve all retreats and advances.
 
-\bf{Chat:}
+\textbf{Chat:}
 If players are connected at the same time it will be possible for them to send text messages to each other in real time. This will be seperate from the state based gameplay described above.
 
-
-
-\section*{Use Case Diagrams}
-\includegraphics[width=\textwidth]{master.png}
-\includegraphics[width=\textwidth]{setupmisc.png}
-
-\tableofcontents
-
+\pagebreak
 %Generic Use-Case
 \begin{comment}
 
