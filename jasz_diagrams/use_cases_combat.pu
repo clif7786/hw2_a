@@ -1,0 +1,24 @@
+@startuml
+actor Player
+
+
+Player ---->    (Select Subset of Stack)
+
+
+
+
+
+Player -> (Attack)
+Player --> (Choose Leader)
+Player --> (Spend Combat Manna)
+(Attack) ..|> (Choose Leader) :uses
+(Attack) ..|> (Select Subset of Stack) :uses
+(Choose Leader) ..|> (Select Subset of Stack) :uses
+(Attack) ..|> (Spend Combat Manna) :uses
+Player ---> (Advance)
+Player ---> (Retreat)
+Player ----> (Rally Units)
+(Rally Units) ..|> (Select Subset of Stack) :uses
+
+
+@enduml

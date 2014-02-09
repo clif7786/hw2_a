@@ -1,0 +1,21 @@
+@startuml
+actor Player
+
+
+Player ->    (Select Subset of Stack)
+
+
+Player ->      (Select Ally Candidate)
+Player -->     (Create Emissary)
+Player -->     (Eliminate Emissary)
+Player --->    (Invade Neutral Province)
+(Invade Neutral Province) --|> (Attack) :extends
+Player --->    (Move Diplomacy Marker)
+Player -->     (Conduct Diplomacy)
+Player -->     (Sacrifice a Unit)
+(Sacrifice a Unit) ..|>  (Select Subset of Stack) :uses
+(Conduct Diplomacy) ..|> (Move Diplomacy Marker) :uses
+(Sacrifice a Unit)  ..|> (Move Diplomacy Marker) :uses
+
+
+@enduml

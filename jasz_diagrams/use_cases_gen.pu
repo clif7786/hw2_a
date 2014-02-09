@@ -1,0 +1,23 @@
+@startuml
+actor Player
+
+Player ->       (Select Scenario)
+Player ->       (Set Up Game)
+Player --->     (Resume Game)
+Player --->     (Save Game)
+Player ---->    (End Interphase)
+Player ---->    (Select Subset of Stack)
+
+
+
+
+Player -> (Move)
+Player --> (Carry)
+(Carry) --|> (Move) :extends
+(Carry) ..|> (Select Subset of Stack) :uses
+(Move)  ..|> (Select Subset of Stack) :uses
+
+
+
+
+@enduml
