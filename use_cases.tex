@@ -74,28 +74,6 @@
 \end{comment}
 
 \begin{comment}
-
-
-* We have save game but not quit. Is save game related enough to quitting
-  to extend or be merged with quitting?
-
-* Should Choose Leader be merged with a general "Select Unit(s)"?
-
-* Some things don't fit nicely into the two-column format. do they need tweaking?
-
-* Should Advance and Retreat extend Movement? Extend Combat?
-
-  Overall I feel like we could have more extending, to make an interesting diagram
-
-* are we missing any big use-cases? Do any need to be tweaked
-
-* tjasz: are only units sacrificed in Human Sacrifice, or should this description
-  also account for characters?
-
-Need plan of action to have diagram and associated descriptions ready on thursday
-
-\end{comment}
-
 \section{Select Game Type}
 \horiz
 \begin{al}
@@ -112,8 +90,9 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 	\item[Alternative:] Player selects load game. In this case player selects
                         from a list of saved games.
 \end{al}
+\end{comment}
 
-\begin{comment}
+
 \section{Set up a scenario}
 \begin{al}
 	\item[Actor:] Players starrting a game
@@ -140,9 +119,8 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 	\item Player cancels unit placement. System resets last unit placement.
 	\end{enumerate}
 \end{al}
-\end{comment}
 
-\section{Resume Game} %should this be part of "Start Game"?
+\section{Resume Game}
 \horiz
 \begin{al}
 	\item[Actor:] Player
@@ -258,11 +236,11 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{twocol}
 \end{comment}
 
-\section{Move Units}
+\section{Move}
 \horiz
 \begin{al}
 	\item[Actor:] Player
-	\item[Goal:] To move unit(s) from one tile to another
+	\item[Goal:] To move unit(s) or character(s) from one tile to another
 	\item[Summary:] Move a unit, character, monster, stack, or subset of a stack
                     from a starting tile to a destination tile, depending on
                     terrain or movement points.
