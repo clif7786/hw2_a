@@ -15,3 +15,13 @@ During combat play cannot progress if another player must retreat or advance aft
 
 Chat:
 If players are connected at the same time it will be possible for them to send text messages to each other in real time. This will be seperate from the state based gameplay described above.
+
+
+--------------------------------------------------------------
+
+Tyler Jaszkowiak:
+
+I uploaded my use case diagrams and their sources in a separate folder. 
+
+Then I added a few comments to the todo list in the use_cases.tex. I changed instance of
+    "mana" to "manna". I added the proper relations to the magic use cases.

@@ -1,4 +1,4 @@
-\documentclass{article}
+﻿\documentclass{article}
 \usepackage{graphicx}
 \usepackage{fullpage} % really need smaller margins for two column steps
 \usepackage[none]{hyphenat} %no hyphenation!
@@ -84,7 +84,7 @@
 
 * Display Random Event & Player order could use more User Actions
   to make it use-casey. "Actor: System" is the sort of thing that would give
-  Dr. Jeffery a heart-attack
+  Dr. Jeffery a heart-attack. (tjasz: do we even need a case for it?)
 
 * Invasion can happen outside of normal player movement
   And the player might not be able to prevent it.
@@ -94,14 +94,14 @@
 
 * Some things don't fit nicely into the two-column format. do they need tweaking?
 
-* View Character Statistics should maybe be expanded to any unit type, and include
-  any current effects such as current Movement Points.
-
 * Should Advance and Retreat extend Movement? Extend Combat?
 
   Overall I feel like we could have more extending, to make an interesting diagram
 
 * are we missing any big use-cases? Do any need to be tweaked
+
+* tjasz: are only units sacrificed in Human Sacrifice, or should this description
+  also account for characters?
 
 Need plan of action to have diagram and associated descriptions ready on thursday
 
@@ -362,7 +362,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 	\item[Precondition:] Player is in the Combat Resolution Segment
 	\item[Summary:] Player selects units to attack and unit to be attacked.
 	                Combat is resolved by the system.
-	\item[Related:] \textbf{Choose Leader}, \textbf{Spend Combat Mana}
+	\item[Related:] \textbf{Choose Leader}, \textbf{Spend Combat Manna}
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
@@ -370,7 +370,7 @@ Need plan of action to have diagram and associated descriptions ready on thursda
   \tabrow{Attacker selects unit to be attacked.}
          {System notifies defending player.}
   \tableft{If multiple leaders (Choose Leader).}
-  \tabrow{If magic capable leaders (Spend Combat Mana).}
+  \tabrow{If magic capable leaders (Spend Combat Manna).}
          {System displays effects of combat.}
 \end{twocol}
 \begin{al}
@@ -445,25 +445,25 @@ Need plan of action to have diagram and associated descriptions ready on thursda
                         Leader is not allowed to be used.
 \end{al}
 
-\section{Spend Combat Mana}
+\section{Spend Combat Manna}
 \horiz
 \begin{al}
 	\item[Actor:] Player
 	\item[Goal:] Cast magic from leaders in combat
 	\item[Precondition:] Player is in combat and has magical leader
-                         with mana points
+                         with manna points
 	\item[Summary:] Player chooses which leader to use.
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
   \tableft{Player selects character.}
-  \tabrow{Player chooses amount of mana to spend.}
+  \tabrow{Player chooses amount of manna to spend.}
          {System shows player combat strength of spell.}
 \end{twocol}
 \begin{al}
 	\item[Alternatives:]
 	\begin{enumerate} \item Player deselects unit in step 1.
-                      \item Player does not have enough mana in step 2.
+                      \item Player does not have enough manna in step 2.
 	\end{enumerate}
 \end{al}
 
@@ -491,25 +491,25 @@ Need plan of action to have diagram and associated descriptions ready on thursda
 \end{al}
 
 %magic
-\section{View Character Statistics}
+\section{View Character/Unit Statistics}
 \horiz
 \begin{al}
 	\item[Actors:] Player
-	\item[Goal:] view the statistics and current state of a certain character 
-            or monster in play. 
-	\item[Precondition:] a character or monster is in play.
+	\item[Goal:] view the statistics and current state of a certain character, 
+            unit, or monster in play. 
+	\item[Precondition:] a character, unit, or monster is in play.
 	\item[Summary:] The user performs this action when he wishes to view the full statistics
-            relating to a character or monster in play. It is similar to consulting the character’s 
+            relating to a character, unit, or monster in play. It is similar to consulting the character’s 
             card in the manual system.
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
-  \tabrow{Player selects the character or monster}
-         {System displays a menu asking what the user wants to do with the character or monster
+  \tabrow{Player selects the character, unit, or monster}
+         {System displays a menu asking what the user wants to do with the selected object
 (may include Move, Attack, Cast spell, View, etc\ldots depending on game phase).}
   \tabrow{ Player chooses View.}
-         { System displays the character or monster’s relevant statistics (those on the game card
-      plus manna level if applicable) in a new window}
+         { System displays the character, unit or monster’s relevant statistics (those on the game card
+      plus manna level and movement points remaining if applicable) in a new window}
   \tableft{User closes the window.}
 \end{twocol}
 \begin{al}
@@ -559,6 +559,7 @@ makes internal adjustments to create the force walls.}
             levels, the targets available, and the game phase.
         \item[Summary:] The actor will choose one of his characters, select a spell, 
             and then choose one or more targets based on the cost of the spell.
+        \item[Related:] Uses "Select Subset of Stack" and extends "Cast Untargeted Spell".
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
@@ -596,6 +597,7 @@ makes internal adjustments to create the force walls.}
             No non-conjuring spells may have been cast by this character this game-turn.
         \item[Summary:] The actor will choose one of his characters, select a spell,
             and then choose how long the unit is to remain in play.
+        \item[Related:] Extends "Cast Untargeted Spell".
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
@@ -631,6 +633,7 @@ Another of the player’s magic-capable characters must reside in the same hex a
 character.
         \item[Summary:] the user selects a character, chooses this spell, and then selects how much
 Manna to transfer and to what character.
+        \item[Related:] Extends "Cast Untargeted Spell".
 \end{al}
 \textbf{Steps:} \\
 \begin{twocol}
