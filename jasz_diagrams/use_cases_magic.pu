@@ -1,4 +1,6 @@
 @startuml
+title Tyler Jaszkowiak Magic Cases
+
 actor Player
 
 Player --->    (Select Subset of Stack)
