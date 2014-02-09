@@ -8,7 +8,6 @@ left to right direction
 :Defender: as Defender
 
 'Setup & Misc Use Cases
-Player -up--> (Select Game Type)
 Player -up--> (Set up a scenario)
 Player -up--> (Resume Game)
 Player -up--> (Save Game) : Setup & Misc
@@ -17,9 +16,9 @@ Player -up--> (End Inter-Phase)
 Player -up--> (View Character Statistics)
 
 'Movement Use Cases
-Player <-left- (Move Units) : Movement
-(Move Units) .left.> (Carry)
-(Move Units) .left.> (Select Subset of Stack)
+Player <-left- (Move) : Movement
+(Move) .left.> (Carry)
+(Move) .left.> (Select Subset of Stack)
 
 'Combat Use Cases
 Player -right-> (Attack Units)
@@ -41,7 +40,6 @@ Player -down--> (Eliminate Emissary)
 Player -down--> (Conduct Diplomacy) : Diplomacy
 Player -down--> (Move Diplomacy Marker)
 Player -down--> (Sacrifice a Unit)
-Player -down--> (Invade Neutral Province)
 Player -down--> (Select Ally Candidate)
 
 'Uses Cases involving defending player in combat
