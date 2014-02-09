@@ -3,11 +3,8 @@ actor Player
 
 Player --->    (Select Subset of Stack)
 
-Player --> (Select Spell)
-Player ---->    (View Char/Unit Statistics)
-(Select Spell) ..|> (View Char/Unit Statistics) :uses
+Player --->    (View Char/Unit Statistics)
 Player --> (Cast Untargeted Spell)
-(Cast Untargeted Spell) ..|> (Select Spell) :uses
 Player --> (Cast Targeted Spell)
 (Cast Targeted Spell) --|> (Cast Untargeted Spell) :extends
 (Cast Targeted Spell) ..|> (Select Subset of Stack) :uses
