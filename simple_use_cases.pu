@@ -1,0 +1,36 @@
+@startuml
+' A second diagram for all the "simple" use cases that don't extend or use
+actor Player
+'actor Players
+
+Players -up->            (Choose Alliances)
+Players -down->           (End Game)
+Players -right-> (Counterspell)
+Player -up-->            (End Phase)
+Player -down-->           (Teleport)
+Player -up->          (Seal Tunnel)
+Player -down->         (Rally)
+Player -up-->        (Attempt Escape)
+Player -down-->       (Select Unit)
+Player -up->      (View Game Information)
+Player -down->     (View Terrain Information)
+'18.24
+Player -up-->    (Remove Emissary)
+'18.23
+Player -down-->   (Create Emissaries)
+'18.16
+Player -up->  (Move Diplomacy Marker)
+'18.27
+Player -down-> (Conduct Diplomacy)
+Player -up-->  (Attack)
+
+' A unit can be eliminated through Human Sacrifice, overfull stacks, or
+' murdering captured characters at a capital.
+' It's hard to think of how these all fit together in a use case diagram  
+' so I just went with seperate ones
+Player -down-->   (Sacrifice Unit)
+Player -up->  (Kill Character)
+Player -down-> (Prune Stack)
+
+'Player -down-> (View Unit Information) 'I think this should be part of (Select Unit)
+@enduml

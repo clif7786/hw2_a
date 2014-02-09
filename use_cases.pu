@@ -1,19 +1,45 @@
 @startuml
 actor Player
-actor :Another Player:
+actor Players
+actor :Defending Player:
+' This part is tricky. Not sure if (Select Scenario) should be seperate from
+' (New Game) or not
+Players -down-> (Begin Game)
+           (Begin Game) <.up. (New Game)                      : <<extend>>
+'                             (New Game) .> (Select Scenario) : <<uses>>
+           (Begin Game) <.down.    (Resume Game)                   : <<extend>>
 
-Player ->       (Begin Game)
-                (Begin Game) <- :Another Player:
-Player -->      (Movement)
-Player --->     (Magic)
-                (Magic) <. (Cast Spell)
-                (Magic) <. (Counterspell)
-Player ---->    (Select Unit)
-Player ----->   (View Statistics) 
-                (View Statistics) <. (View Character Statistics)
-                (View Statistics) <. (View Game Statistics)
-Player ------>  (Combat)
-Player -------> (Conduct Diplomacy)
-                (Conduct Diplomacy) <- :Another Player:
+' This was really straightforward. There are different types of spells
+' but they're all initiated through a "Cast Spell" user action
+Player --> (Cast Spell)
+           (Cast Spell) <.down. (Cast Untargeted Spell) : <<extends>>
+           (Cast Spell) <.down. (Cast Targeted Spell)   : <<extends>>
+           (Cast Spell) <.down. (Cast Conjuring Spell)  : <<extends>>
+'           (Cast Spell) <. (Counterspell) : <<extends>>
+ '                          (Counterspell) <- Players
+
+' Movement's pretty simple. The hard part was whether (Advance / Retreat)
+' should be related to it or not. In the end I thought it should be, because
+' I imagine that Advancing and Retreating is just movement with a few special
+' requirements and .
+Player -up-> (Move Units)
+            (Move Units) <.down. (Carry)             : <<extend>>
+
+' Another tricky part. Deciding how to divide up combat resolution was
+' Especially hard.
+Player -right-> (Influence Combat)
+              (Influence Combat) <- :Defending Player:
+Player -left-> (Resolve Combat)
+               (Resolve Combat)
+(Resolve Combat) .> (Move Units) : <<uses>>
+'               (Resolve Combat) <.up. (Advance / Retreat) : <<extends>>
+'                                   (Advance / Retreat) .> (Move Units) :<<uses>>
+
+' This was tricky, it's just complicated enough to warrent having a use case
+' (user can select arbitrary subsets out of stacks)
+' but a ton of other use cases would end up using it incidentally
+' which would be a huge mess on the diagram
+'Player ------> (Select Units)
+'               (Select Units)
 
 @enduml
